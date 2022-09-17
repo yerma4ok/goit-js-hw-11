@@ -116,3 +116,9 @@ body {
    border-radius: 2px;
    cursor: pointer;
  }
+
+ .is-hidden {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}

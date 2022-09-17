@@ -45,8 +45,16 @@ btnLoadMore.addEventListener('click', () => {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
-    } else {
+    } 
+    else if (foundData.hits.length < 40) {
+      btnLoadMore.classList.add('is-hidden');
+      Notiflix.Notify.failure(
+        'Sorry, there are no images matching your search query. Please try again.'
+      );
+    } 
+    else {
       renderImageList(foundData.hits);
+      btnLoadMore.classList.remove('is-hidden');
       Notiflix.Notify.success(
         `Hooray! We found ${foundData.totalHits} images.`
       );
