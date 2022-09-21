@@ -65,9 +65,7 @@ async function findPictureRenderUi() {
 async function loadMoreRenderUi() {
   try {
     const loadMoreAnswerFromApi = await newApi.findPicture();
-    // if (newApi.length < 40) {
-    //   refs.loadBtn.classList.add('is-hidden');
-    // }
+
     if (newApi.length === 0) {
       refs.loadBtn.classList.add('is-hidden');
       Notiflix.Notify.failure(
